@@ -1,6 +1,6 @@
 export default interface CitadelItem {
   name: string;
-  location: Location;
+  location: Locations;
   defenses: Defense;
   inhabitants: Inhabitants;
   resources: Resources;
@@ -8,7 +8,7 @@ export default interface CitadelItem {
 }
 
 // --- LOCATION --- //
-interface Location {
+interface Locations {
   continent: string;
   coordinates: {
     latitude: number;
