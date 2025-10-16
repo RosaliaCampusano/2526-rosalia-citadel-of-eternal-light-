@@ -1,6 +1,6 @@
 import { Card } from "../helpers/Card";
 
-export default function Defenses({ defense }) {
+export default function Defenses({ defense }: any) {
   return (
     <div className="h-full w-full items-center justify-center rounded-xl bg-gray-900">
       <h1 className="text-2 pt-5 text-center text-amber-600">
@@ -14,7 +14,7 @@ export default function Defenses({ defense }) {
         Height: {defense.walls.height}
       </p>
       <h1 className="pt-5 text-center text-2xl text-amber-500">Enchantments</h1>
-      {defense.walls.enchantments.map((elem) => {
+      {defense.walls.enchantments.map((elem: any) => {
         let level: number = Math.floor((elem.level * 50) / 50);
         return (
           <>
@@ -32,7 +32,7 @@ export default function Defenses({ defense }) {
       })}
       <div className="ml-10 h-[1%] w-[90%] items-center justify-center bg-gray-500"></div>
       <h1 className="pt-5 text-center text-2xl text-amber-500">Towers</h1>
-      {defense.towers.map((elem) => {
+      {defense.towers.map((elem: any) => {
         return <Card tower={elem} />;
       })}
     </div>

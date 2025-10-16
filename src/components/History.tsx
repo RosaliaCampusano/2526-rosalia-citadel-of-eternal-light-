@@ -16,7 +16,7 @@ export default function History({ history }: any) {
           multiple={false}
         >
           <option value={""}>Select a Year</option>
-          {history.majorEvents.map((item) => {
+          {history.majorEvents.map((item: any) => {
             return <option value={item.year}>{item.year}</option>;
           })}
         </select>

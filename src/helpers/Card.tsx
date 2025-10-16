@@ -1,4 +1,4 @@
-export const Card = ({ tower }) => {
+export const Card = ({ tower }: any) => {
   let progressBarColor: string = "";
   const porcentBar = Math.floor((tower.armament.ammunitionCount * 1000) / 100);
 
@@ -29,7 +29,7 @@ export const Card = ({ tower }) => {
         ></div>
       </div>
       <h1 className="pt-5 text-center text-4xl text-amber-600">Guards</h1>
-      {tower.guards.map((elem) => {
+      {tower.guards.map((elem: any) => {
         return (
           <p className="pt-5 text-center text-3xl text-amber-50">
             {elem.name} - {elem.rank}
