@@ -1,6 +1,6 @@
 export default function Location({ title, location }: any) {
   const nearbyLandmarks = location.nearbyLandmarks.sort(
-    (a, b) => a.distance - b.distance,
+    (a: any, b: any) => a.distance - b.distance,
   );
   return (
     <div className="h-[80%] w-[80%] items-center justify-center rounded-xl bg-gray-900">
