@@ -26,23 +26,25 @@ function App() {
   return (
     <>
       <Navigation setScreen={setScreen} />
-      <>{handlerScreen(screen)}</>
+      <div className="h-full w-full items-center justify-center pt-8 pl-20">
+        {data !== null ? handlerScreen(screen, data!) : ""}
+      </div>
     </>
   );
 }
 
-const handlerScreen = (screen: NavigationScreen) => {
+const handlerScreen = (screen: NavigationScreen, data: CitadelItem) => {
   switch (screen) {
     case NavigationScreen.Location:
-      return <Location />;
+      return <Location title={data.name} location={data.location} />;
     case NavigationScreen.Defense:
-      return <Defenses />;
+      return <Defenses defense={data.defenses} />;
     case NavigationScreen.History:
-      return <History />;
+      return <History history={data.history} />;
     case NavigationScreen.Inhabitants:
-      return <Inhabitants />;
+      return <Inhabitants data={data.inhabitants} />;
     case NavigationScreen.Resources:
-      return <Resources />;
+      return <Resources resource={data.resources} />;
   }
 };
 
