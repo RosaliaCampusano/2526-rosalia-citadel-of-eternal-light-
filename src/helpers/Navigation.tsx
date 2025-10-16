@@ -1,13 +1,12 @@
-import React, { useState } from "react";
 import { NavigationScreen, NavigationName } from "../constants";
 
 const Navigation = ({ setScreen }: any) => {
   return (
-    <nav className="gap-4justify-between grid h-full grid-cols-5 bg-cyan-950">
+    <nav className="gap-4justify-between grid h-[7%] grid-cols-5 bg-cyan-950">
       {NavigationName.map((item) => {
         return (
           <button
-            className="text-4xl"
+            className="text-3xl"
             onClick={() => {
               const newScreen = changeScreen(item);
               setScreen(newScreen);
